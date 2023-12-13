@@ -1,8 +1,8 @@
 #' @name commit
 #' @title `commit.R`
-#' @author Tim Fraser, PhD
-#' @description Helpful script for speedy committing of ALL changes to github. 
-#' Note: BE CAREFUL! Not always a good idea.
+#' @author Andres Garcia, Hengtao Zhao
+#' @description Repository for demoing how to get the reliability of a system consisting of several components. 
+
 
 # This script commits to github.
 require(gert)
