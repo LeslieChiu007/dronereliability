@@ -51,10 +51,9 @@
 #' plots are the reliability of the original system, using a new motor, using a new battery system,
 #' using a new propeller, and using a new motor, battery, and propeller at the same time.
 #' 
-#' It then oututs the estimated reliability for each observed scenario at 1 year.
+#' It then outputs the estimated reliability for each observed scenario at 1 year.
 #' 
 #' 
-#' expected life cycles. 
 #' @export
 
 get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300, 
@@ -261,19 +260,19 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
     theme_minimal()
   plot1
   # Finds the reliability for each improved system and converts it into a percentage
-  new_m = prob2[6,4] * 100
-  new_p = prob2[6,8] * 100
-  new_b = prob2[6,6] * 100
-  new_e = prob2[6,10]* 100
+  new_m = prob2[21,4] * 100
+  new_p = prob2[21,8] * 100
+  new_b = prob2[21,6] * 100
+  new_e = prob2[21,10]* 100
   
-  nm_lb = round(prob2[6,19],3)    
-  nm_ub = round(prob2[6,20],3)  
-  nb_lb = round(prob2[6,21],3)
-  nb_ub = round(prob2[6,22],3)  
-  np_lb = round(prob2[6,23],3) 
-  np_ub = round(prob2[6,24],3)  
-  ne_lb = round(prob2[6,25],3)  
-  ne_ub = round(prob2[6,26],3)  
+  nm_lb = round(prob2[21,19],3)    
+  nm_ub = round(prob2[21,20],3)  
+  nb_lb = round(prob2[21,21],3)
+  nb_ub = round(prob2[21,22],3)  
+  np_lb = round(prob2[21,23],3) 
+  np_ub = round(prob2[21,24],3)  
+  ne_lb = round(prob2[21,25],3)  
+  ne_ub = round(prob2[21,26],3)  
   
   tab = tibble(
     id = 1:4,

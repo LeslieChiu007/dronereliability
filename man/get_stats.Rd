@@ -83,10 +83,7 @@ the average values as well as an upper and lower bound with a 95% confidence int
 plots are the reliability of the original system, using a new motor, using a new battery system,
 using a new propeller, and using a new motor, battery, and propeller at the same time.
 
-It then oututs the estimated reliability for each observed scenario at 1 year.
-
-
-expected life cycles.
+It then outputs the estimated reliability for each observed scenario at 1 year.
 }
 \author{
 Hengtao Zhao & Andres Garcia
