@@ -265,22 +265,22 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
   new_b = prob2[21,6] * 100
   new_e = prob2[21,10]* 100
   
-  nm_lb = round(prob2[21,19],3)    
-  nm_ub = round(prob2[21,20],3)  
-  nb_lb = round(prob2[21,21],3)
-  nb_ub = round(prob2[21,22],3)  
-  np_lb = round(prob2[21,23],3) 
-  np_ub = round(prob2[21,24],3)  
-  ne_lb = round(prob2[21,25],3)  
-  ne_ub = round(prob2[21,26],3)  
+  nm_lb = round(prob2[21,20],3) * 100
+  nm_ub = round(prob2[21,21],3) * 100
+  nb_lb = round(prob2[21,22],3) * 100
+  nb_ub = round(prob2[21,23],3) * 100
+  np_lb = round(prob2[21,24],3) * 100
+  np_ub = round(prob2[21,25],3) * 100
+  ne_lb = round(prob2[21,26],3) * 100
+  ne_ub = round(prob2[21,27],3) * 100
   
   tab = tibble(
     id = 1:4,
     statement = c(
-      paste0("The expected reliability at 1 year for a drone with a new motor is ", new_m, "%, with an expected range of ", nm_lb," to ",nm_ub," (95% CI)"),
-      paste0("The expected reliability at 1 year for a drone with a new propeller is ", new_p, "%, with an expected range of ", np_lb," to ",np_ub," (95% CI)"),
-      paste0("The expected reliability at 1 year for a drone with a new battery is ", new_b, "%, with an expected range of ", nb_lb," to ",nb_ub," (95% CI)"),
-      paste0("The expected reliability at 1 year for a drone with a new motor, propeller, and battery is ", new_e, "%, with an expected range of ", ne_lb," to ",ne_ub," (95% CI)")
+      paste0("The expected reliability at 1 year for a drone with a new motor is ", new_m, "%, with an expected range of ", nm_lb,"% to ",nm_ub,"% (95% CI)"),
+      paste0("The expected reliability at 1 year for a drone with a new propeller is ", new_p, "%, with an expected range of ", np_lb,"% to ",np_ub,"% (95% CI)"),
+      paste0("The expected reliability at 1 year for a drone with a new battery is ", new_b, "%, with an expected range of ", nb_lb,"% to ",nb_ub,"% (95% CI)"),
+      paste0("The expected reliability at 1 year for a drone with a new motor, propeller, and battery is ", new_e, "%, with an expected range of ", ne_lb,"% to ",ne_ub,"% (95% CI)")
     )
   )  
   
