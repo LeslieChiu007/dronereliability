@@ -37,17 +37,8 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
   
   # Load packages
   library(dplyr)
-  library(tibble)
   library(ggplot2)
-  library(dplyr)
-  library(magrittr)
-  library(tidyverse)
-  library(mosaicCalc)
-  library(ggpubr)
-  library(moments)
-  library(broom)
-  
-  
+
   # Failure rate for the a drone's ground control, this value was found
   # through literary research
   #lambda_gc = 2.00 * 10^-6
