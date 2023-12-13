@@ -1,6 +1,6 @@
 # demotool
-- **Description**: Repository for demoing how to make a usable tool in an R package
-- **Author**: Tim Fraser, PhD
+- **Description**: Repository for simulating the reliability of a commercial drone to analyze how different components play a role in overall system reliability!
+- **Authors**: Andres Garcia and Hengtao Zhao 
 
 ## How to Install Our Package
 

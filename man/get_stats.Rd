@@ -21,11 +21,31 @@ get_stats(
 )
 }
 \arguments{
-\item{mot1_MTTF}{....}
+\item{mot1_MTTF}{This is the mean time to failure for the motors used in the original drone (control group).}
 
-\item{mot2_MTTF}{....}
+\item{mot2_MTTF}{This is the mean time to failure for the motors in the new system that we are observing.}
 
-\item{prop1_MTTF}{....}
+\item{prop1_MTTF}{This is the mean time to failure for the propellers used in the original drone (control group).}
+
+\item{prop2_MTTF}{This is the mean time to failure for the propellers used in the new system that we are observing.}
+
+\item{bat1_t}{This is the average lifetime of one cycle of the battery system in the control group.}
+
+\item{bat1_lc}{This is the expected cycles until failure for the battery system in the control group.}
+
+\item{bat2_t}{This is the average lifetime of one cycle of the battery system in the new system we observe.}
+
+\item{bat2_lc}{This is the expected cycles until failure for the battery system in the new system that we are observing.}
+
+\item{lambda_gc}{The failure rate for the Ground Control System of a commercial drone.}
+
+\item{lambda_main}{The failure rate for the Mainframe System of a commercial drone.}
+
+\item{lambda_nav}{The failure rate for the Navigation System of a commercial drone.}
+
+\item{lambda_es}{The failure rate for the Electrical System of a commercial drone.}
+
+\item{lambda_pay}{The failure rate for the Payload System of a commercial drone.}
 }
 \description{
 This function will calculate the reliability of a commercial drone system.
@@ -41,12 +61,31 @@ of the ranges that we found online for drone motors and propellers. The MTTF for
 the improved motors and propellers, (mot2 and prop2) are the higher ends of the 
 ranges that we found online. Using these values, we are comparing the reliability
 as a result of using higher quality components. In this function you are free to
-enter your own MTTF for intiial and final motor/battery components and observe
+enter your own MTTF for intitial and final motor/battery components and observe
 how this affects a drone's reliability.
 
 For the batteries, our initial battery component (bat1) is a lithium ion battery
 system. We found its MTTF by multiplying the average lifetime of one cycle (bat1_t)
-by the
+by the expected cycles until failure for the system. For our second battery system,
+we used NiMH batteries as they were observed to be more reliable. We used th same approach
+as above with the average lifetime and expected cycles to find it's MTTF. You are free to
+input any values to compare the effects that battery systems have in the reliabiliy of commercial
+drones.
+
+The failure rates (lambda) for the remaining 5 components were identified through
+literary research and their values set as the default. Once again, you can input different
+values in order to see how these components affect the reliability of a commercial drone system.
+
+The function uses these inputs to find the reliability of each component, and then
+uses these values to run a binomial simulation at each time interval. The function
+then finds the average, standard deviation, and standard error at each interval. It then plots
+the average values as well as an upper and lower bound with a 95% confidence interval. The four
+plots are the reliability of the original system, using a new motor, using a new battery system,
+using a new propeller, and using a new motor, battery, and propeller at the same time.
+
+It then oututs the estimated reliability for each observed scenario at 1 year.
+
+
 expected life cycles.
 }
 \author{

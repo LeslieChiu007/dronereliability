@@ -1,7 +1,7 @@
 #' @name commit
 #' @title `commit.R`
 #' @author Andres Garcia, Hengtao Zhao
-#' @description Repository for demoing how to get the reliability of a system consisting of several components. 
+#' @description Repository for demoing how to get the reliability of a system when changing certain components. 
 
 
 # This script commits to github.
