@@ -1,7 +1,7 @@
 #' @name dev.R
-#' @title Example Development Script for building and checking `demotool` package functions
-#' @author Tim Fraser, your names here...
-#' @description Script for test package building of `demotool` package functions.
+#' @title Example Development Script for building and checking `dronereliability` package functions
+#' @author Andres Garcia, Hengtao Zhao
+#' @description Script for test package building of `dronereliability` package functions.
 
 
 # Unload your package and uninstall it first.

@@ -257,8 +257,7 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
     
     theme_classic(base_size = 14) +
     labs(x = "Time (Hours)", y = "Reliability (%)",
-         title = "System Reliability of Commercial Drones for 1 year",
-         fill = "Scenario") + 
+         title = "System Reliability of Commercial Drones for 1 year") + 
     theme_minimal()
   plot1
   # Finds the reliability for each improved system and converts it into a percentage
@@ -267,20 +266,22 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
   new_b = prob2[6,6] * 100
   new_e = prob2[6,10]* 100
   
-  # Outputs a the reliability at one year for each improved system
-  #print(paste0("The expected reliability at 1 year for a drone with a new motor is ", new_m, "%"))
-  #print(paste0("The expected reliability at 1 year for a drone with a new propeller is ", new_p, "%"))
-  #print(paste0("The expected reliability at 1 year for a drone with a new battery is ", new_b, "%"))
-  #print(paste0("The expected reliability at 1 year for a drone with a new motor, propeller, and battery is ", new_e, "%"))
-  #return(plot1)
+  nm_lb = round(prob2[6,19],3)    
+  nm_ub = round(prob2[6,20],3)  
+  nb_lb = round(prob2[6,21],3)
+  nb_ub = round(prob2[6,22],3)  
+  np_lb = round(prob2[6,23],3) 
+  np_ub = round(prob2[6,24],3)  
+  ne_lb = round(prob2[6,25],3)  
+  ne_ub = round(prob2[6,26],3)  
   
   tab = tibble(
     id = 1:4,
     statement = c(
-      paste0("The expected reliability at 1 year for a drone with a new motor is ", new_m, "%, with an expected range of "),
-      paste0("The expected reliability at 1 year for a drone with a new propeller is ", new_p, "%"),
-      paste0("The expected reliability at 1 year for a drone with a new battery is ", new_b, "%"),
-      paste0("The expected reliability at 1 year for a drone with a new motor, propeller, and battery is ", new_e, "%")
+      paste0("The expected reliability at 1 year for a drone with a new motor is ", new_m, "%, with an expected range of ", nm_lb," to ",nm_ub," (95% CI)"),
+      paste0("The expected reliability at 1 year for a drone with a new propeller is ", new_p, "%, with an expected range of ", np_lb," to ",np_ub," (95% CI)"),
+      paste0("The expected reliability at 1 year for a drone with a new battery is ", new_b, "%, with an expected range of ", nb_lb," to ",nb_ub," (95% CI)"),
+      paste0("The expected reliability at 1 year for a drone with a new motor, propeller, and battery is ", new_e, "%, with an expected range of ", ne_lb," to ",ne_ub," (95% CI)")
     )
   )  
   
@@ -290,6 +291,7 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
   return(output)
   
 }
+
 
 # d = drone_reliability(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300, 
 #                       prop2_MTTF=500, bat1_t = 800, bat1_lc = 400,
