@@ -299,3 +299,4 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
 #                       lambda_pay = 1.10*10^-6)
 # d$plot
 # d$tab
+
