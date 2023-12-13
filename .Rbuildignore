@@ -4,3 +4,6 @@
 ^.Rhistory
 ^z$
 ^docs$
+^dronereliability\.Rcheck$
+^dronereliability.*\.tar\.gz$
+^dronereliability.*\.tgz$

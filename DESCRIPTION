@@ -1,15 +1,14 @@
-Package: demotool
+Package: dronereliability
 Version: 0.1.0
-Date: 2023-11-01
-Title: Demo package for Publicly Available R Package Tool
+Date: 2023-12-13
+Title: Drone Reliability
 Authors@R: c(
-  person("Fraser", "Timothy", email = "tmf77@cornell.edu", role = c("aut", "cre")),
-  person("Julia", "Fakeperson", email = "myemail@cornell.edu", role = "aut"),
-  person("Javier", "Fakeperson", email = "myemail2@cornell.edu", role = "ctb") )
-Author: Timothy Fraser [aut, cre],
-  Julia Fakeperson [aut],
-  Javier Fakeperson [ctb]
-Maintainer: Timothy Fraser <tmf77@cornell.edu>
+  person("Zhao", "Hengtao", email = "hz298@cornell.edu", role = c("aut", "cre")),
+  person("Garcia", "Andres", email = "@cornell.edu", role = c("aut", "cre"))
+  )
+Author: Hengtao Zhao [aut, cre],
+  Andres Garcia [aut],
+Maintainer: Hengtao Zhao <hz298@cornell.edu>
 Description: One-line description for package goes here. Make sure this script ends with an extra blank line after `Imports:`
 License: MIT + file LICENSE
 Encoding: UTF-8
