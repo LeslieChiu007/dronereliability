@@ -12,4 +12,9 @@ library(demotool) # load package
 plus_one(x = 2) # test function
 
 # Now do yours!
-# devtools::install_github("yourgithubname/your_repo_name_which_should_be_the_same_as_your_package_name")
+devtools::install_github("LeslieChiu007/dronereliability", dependencies = TRUE)
+
+library(dronereliability)
+dronereliability::get_stats()
+
+remove.packages("dronereliability")

@@ -37,7 +37,6 @@ get_stats = function(mot1_MTTF = 8000, mot2_MTTF = 12000, prop1_MTTF = 300,
   
   # Load packages
   library(dplyr)
-  library(ggplot2)
   library(tibble)
   library(ggplot2)
   library(dplyr)
