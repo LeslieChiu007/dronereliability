@@ -1,7 +1,7 @@
 #' @name workflow.R
-#' @title Example Workflow for package functions
-#' @author your names here...
-#' @description Script for test workflow of package functions.
+#' @title Example Workflow for `dronereliability` package functions
+#' @author Hengtao Zhao, Andres Garcia
+#' @description Script for test workflow of `dronereliability` package functions.
 
 # Load functions straight from file
 source("R/get_stats.R")

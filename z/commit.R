@@ -16,3 +16,4 @@ gert::git_add(dir(all.files = TRUE))
 gert::git_commit_all(message = "....")
 # Push all changes to Github
 gert::git_push()
+
