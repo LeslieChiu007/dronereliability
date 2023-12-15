@@ -39,7 +39,7 @@ Imports:
     
 ```
 
-## 3. Overview
+## 2. Overview
 
 ```r
 # This function will calculate the reliability of a commercial drone system.
@@ -88,7 +88,7 @@ Imports:
 # It then outputs the estimated reliability for each observed scenario at 1 year.
 ```
 
-## 2. Workflow
+## 3. Workflow
 
 ```r
 #' @name workflow.R
