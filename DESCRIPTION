@@ -9,7 +9,7 @@ Authors@R: c(
 Author: Hengtao Zhao [aut, cre],
   Andres Garcia [aut],
 Maintainer: Hengtao Zhao <hz298@cornell.edu>
-Description: One-line description for package goes here. Make sure this script ends with an extra blank line after `Imports:`
+Description: Analyze the expected reliability of a drone after 1000 hours by inputting failure rates for different components
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
